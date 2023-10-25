@@ -23,9 +23,18 @@ const startColorChange = function(){
         document.body.style.backgroundColor = randomColor()
     }
 }
+const showColorCode = function(){
+    colorId = setInterval(changeColorCode, 1000);
+
+    function changeColorCode(){
+        colorCode.textContent =
+        `Hex value: ${randomColor()}`
+    }
+}
 
 const stopColorChange = function(){
     clearInterval(intervalId)
+    clearInterval(colorId)
 }
 
 
