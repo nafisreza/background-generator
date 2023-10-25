@@ -16,6 +16,16 @@ startBtn = document.querySelector("#start")
 stopBtn = document.querySelector("#stop")
 colorCode = document.querySelector(".colorCode")
 
+let intervalId, colorId;
+const startColorChange = function(){
+        intervalId = setInterval(changeBgColor,1000)
+    function changeBgColor(){
+        document.body.style.backgroundColor = randomColor()
+    }
+}
+
+
+
 startBtn.addEventListener('click', startColorChange)
 stopBtn.addEventListener('click', stopColorChange)
 startBtn.addEventListener('click', showColorCode)
