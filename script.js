@@ -10,3 +10,14 @@ const randomColor = function(){
     return color
 }
 
+// Event listeners
+
+startBtn = document.querySelector("#start")
+stopBtn = document.querySelector("#stop")
+colorCode = document.querySelector(".colorCode")
+
+startBtn.addEventListener('click', startColorChange)
+stopBtn.addEventListener('click', stopColorChange)
+startBtn.addEventListener('click', showColorCode)
+
+
