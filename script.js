@@ -26,8 +26,9 @@ const startColorChange = function(){
     }
 }
 const showColorCode = function(){
-    colorId = setInterval(changeColorCode, 1000);
-
+    if(!colorId){
+        colorId = setInterval(changeColorCode, 1000);
+    }
     function changeColorCode(){
         colorCode.textContent =
         `Hex value: ${randomColor()}`
@@ -38,6 +39,7 @@ const stopColorChange = function(){
     clearInterval(intervalId)
     intervalId = null
     clearInterval(colorId)
+    colorId = null
 }
 
 
